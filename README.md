@@ -34,12 +34,11 @@ Choose **MARIO GAME** or **LUIGI GAME** on the title screen. In **OPTIONS**, sel
 | D-pad | Move; Down crouches when big |
 | A | Hold to run; press to throw a fireball in Fire form |
 | B | Jump; hold for a higher jump |
-| C | Swim while underwater |
+| C | Hold to air swim to un-softlock yourself from difficult areas. |
 | Start | Start / pause |
 
-These are controller inputs; keyboard bindings depend on the emulator.
-
 Hybrid Mode combines Mario's power states with Sonic-style ring protection. Mario Mode uses stricter damage rules: small characters die without a shield even when carrying rings, and a hit while big removes rings and shrinks the character. Shields still absorb a hit.
+No matter the mode, 10 rings gives Mario a Super Mushroom, 30 rings gives Mario a Fire Flower. Shield monitors work as they do in Sonic 2.
 
 ## Project layout
 
