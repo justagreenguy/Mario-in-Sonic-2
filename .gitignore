@@ -7,6 +7,10 @@ venv/
 # Generated screenshots, previews, and play-session logs
 /tools/out/
 
+# Full ROM build outputs (keep binary source assets tracked)
+s2built.bin
+s2built.prev.bin
+
 # Editor and OS metadata
 .vscode/
 .idea/
