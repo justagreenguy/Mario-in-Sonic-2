@@ -23,6 +23,7 @@ Button names: up down left right b c a start (Genesis bit order 0..7).
 import ctypes
 import os
 import re
+import shutil
 import socket
 import struct
 import subprocess
@@ -32,7 +33,7 @@ import zlib
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-BLASTEM = os.path.join(ROOT, "blastem-win64-1.0.0", "blastem.exe")
+BLASTEM = os.environ.get("BLASTEM") or "blastem"
 S2 = os.path.join(ROOT, "s2disasm-master")
 
 BUTTONS = {"up": 0, "down": 1, "left": 2, "right": 3, "b": 4, "c": 5, "a": 6, "start": 7}
@@ -87,9 +88,16 @@ class Listing:
 
 class BlastEm:
     def __init__(self, rom, listing=None, port=1234, timeout=20):
+        executable = shutil.which(BLASTEM)
+        if executable is None:
+            raise FileNotFoundError(
+                "BlastEm not found. Install it separately and set BLASTEM to its executable path, "
+                "or add it to PATH."
+            )
+        executable = os.path.abspath(executable)
         self.lst = Listing(listing or os.path.join(S2, "s2.lst"))
-        self.proc = subprocess.Popen([BLASTEM, os.path.abspath(rom), "-D"],
-                                     cwd=os.path.dirname(BLASTEM),
+        self.proc = subprocess.Popen([executable, os.path.abspath(rom), "-D"],
+                                     cwd=os.path.dirname(executable),
                                      stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         deadline = time.time() + timeout
         while True:

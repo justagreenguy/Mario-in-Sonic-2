@@ -12,7 +12,13 @@ This decodes Mario and fireball frames from the ROM and compares them with the S
 
 ## Emulator regression scripts
 
-The `test_*.py` files are standalone scripts, not a pytest suite. They launch the bundled Windows BlastEm through its GDB stub on port 1234, using symbols in `s2disasm-master/s2.lst`. Run one at a time and leave that port free. Screenshot captures need an unobscured emulator window on an interactive Windows desktop.
+The `test_*.py` files are standalone scripts, not a pytest suite. They require a separately installed Windows BlastEm with a GDB stub, using port 1234 and symbols in `s2disasm-master/s2.lst`. Set the `BLASTEM` environment variable to its executable path, or add BlastEm to `PATH`:
+
+```powershell
+$env:BLASTEM = 'C:\path\to\blastem.exe'
+```
+
+Run one test script at a time and leave that port free. Screenshot captures need an unobscured emulator window on an interactive Windows desktop.
 
 For example:
 

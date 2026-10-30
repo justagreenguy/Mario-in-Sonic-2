@@ -21,12 +21,7 @@ cd s2disasm-master
 & .\build_tools\Lua\lua.exe build.lua
 ```
 
-Alternatively, open `s2disasm-master/build.bat`. A successful build produces **`s2disasm-master/s2built.bin`**, a 2 MiB ROM. Open it in a Mega Drive / Genesis emulator. A Windows BlastEm distribution is included in `blastem-win64-1.0.0/`.
-
-```powershell
-# From the project folder:
-& .\blastem-win64-1.0.0\blastem.exe .\s2disasm-master\s2built.bin
-```
+Alternatively, open `s2disasm-master/build.bat`. A successful build produces **`s2disasm-master/s2built.bin`**, a 2 MiB ROM. Open it in a separately installed Mega Drive / Genesis emulator.
 
 The build scripts also support other platforms using Lua 5.3 or later and compatible native tools; Windows is the documented and verified workflow here. See the [upstream build notes](s2disasm-master/readme.md) for the base disassembly.
 
@@ -56,7 +51,6 @@ Hybrid Mode combines Mario's power states with Sonic-style ring protection. Mari
 | `title_art/` | Editable title-screen Aseprite sources |
 | `ending_art/` | Editable ending Aseprite sources, including Luigi variants |
 | `tools/` | Art converters, ROM verification, and emulator regression scripts |
-| `blastem-win64-1.0.0/` | Bundled Windows emulator and its third-party notices |
 | `docs/development-history.md` | Archived implementation notes and historical test results |
 
 ## Art and development
@@ -76,4 +70,4 @@ Python tools use the standard library. See [tools/README.md](tools/README.md) fo
 
 This project builds on the Sonic Retro Sonic 2 disassembly and the Super Mario Bros. disassembly included here. Sonic the Hedgehog and its original game content belong to Sega; Mario, Luigi, and Super Mario Bros. content belong to Nintendo. This is an unofficial fan project.
 
-The base disassembly's [notice](s2disasm-master/readme.md) prohibits commercial use. Third-party tools retain their own notices, including [BlastEm's license](blastem-win64-1.0.0/COPYING.txt), [SDL's license](blastem-win64-1.0.0/SDL-LICENSE.txt), and [GLEW's license](blastem-win64-1.0.0/GLEW-LICENSE.txt). No blanket license is granted over the combined game code and assets.
+The base disassembly's [notice](s2disasm-master/readme.md) prohibits commercial use. Third-party build tools retain their own notices. No blanket license is granted over the combined game code and assets.
