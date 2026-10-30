@@ -7,7 +7,7 @@ and colour-snapping code).
     python -I tools/title_art.py export [--force]   # S2's original art -> title_art/*.aseprite
     python -I tools/title_art.py import             # title_art/*.aseprite -> game data
 
-Run from so-retro. `export` only writes missing files (--force overwrites them
+Run from the project folder. `export` only writes missing files (--force overwrites them
 with S2's originals). `import` regenerates (never hand-edit):
     art/nemesis/mario_title/*.nem, mappings/misc/mario_title/Logo.eni,
     mappings/sprite/MarioTitle0E.asm, art/palettes/mario_title/*.bin,

@@ -51,8 +51,8 @@ useFullWaterTables = 0
 ;	| Set to 1 if you've shifted level IDs around or you want water in levels with a level slot below 8
 ;
 marioMode = 1
-;	| If 1, adds Mario (ported from SMB1) as a playable character ("MARIO ALONE")
-;	| Code lives in mario/; see CLAUDE.md in the project root. Must be 0 for chkbitperfect
+;	| If 1, enables the Mario/Luigi build with title-screen character selection
+;	| Code lives in mario/; see README.md in the project root. Must be 0 for chkbitperfect
 
 ; >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ; AS-specific macros and assembler settings

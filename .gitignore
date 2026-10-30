@@ -1,0 +1,25 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Generated screenshots, previews, and play-session logs
+/tools/out/
+
+# Editor and OS metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*.tmp
+*.bak
+
+# Local emulator saves
+*.state
+*.gst
+*.gs[0-9]
+*.srm

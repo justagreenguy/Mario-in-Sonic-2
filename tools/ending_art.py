@@ -6,7 +6,7 @@ ending_art.py - edit Sonic 2's ending art (Mario build) in Aseprite.
     python -I tools/ending_art.py import             # ending_art/*.aseprite -> game data
     python -I tools/ending_art.py luigi [--force]    # ending_art/luigi/ from Mario's sprites
 
-Run from so-retro. Luigi has his own character frames (ending_art/luigi/
+Run from the project folder. Luigi has his own character frames (ending_art/luigi/
 sprite_07..0E): while he plays, palette line 0 entry $2 is his green, so
 Mario's frames would show green wherever line 0's dark blue was. `luigi`
 makes them from Mario's current frames, recoloured like the in-game Luigi

@@ -2,7 +2,7 @@ Title screen art for the Mario build - edit these in Aseprite, then re-import.
 
 1. Open a .aseprite file here, draw, save (keep it .aseprite, Indexed colour
    mode, and don't resize the canvas).
-2. From the so-retro folder:   python -I tools/title_art.py import
+2. From the project folder:   python -I tools/title_art.py import
    It rebuilds the game data, checks VRAM and the hardware sprite limits,
    and renders the finished screen to tools/out/title_art/scene.png.
 3. Rebuild the ROM (s2disasm-master: build_tools/Lua/lua.exe build.lua).
