@@ -1,0 +1,15 @@
+# Title screen subtitle, written in S2's standard font (the menu/copyright font)
+# by tools/title_art.py import. Letters A-Z, digits 0-9, spaces and . : are
+# available. Empty text = no subtitle.
+#
+# row:    tile row, 0-27 (row 23 = screen y 184-191, just under the "2" and
+#         just above the "1 PLAYER" menu line at row 24)
+# column: tile column of the first letter, or "centre"
+# line:   palette line: 3 = yellow/red like the highlighted menu item, fades in
+#         with the banner; 0 = white/blue like the other menu items, but only
+#         appears at frame 128 (when the characters rise)
+
+text = FOR SUPER PLAYERS
+row = 23
+column = centre
+line = 3
